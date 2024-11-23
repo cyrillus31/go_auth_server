@@ -36,7 +36,7 @@ func MustLoad() *Config {
 		panic(err)
 	}
 	yamlDecoder := yaml.NewDecoder(file)
-	if err = yamlDecoder.Decode(cfg); err != nil {
+	if err = yamlDecoder.Decode(&cfg); err != nil {
 		panic("Failed to decode the config: " + err.Error())
 	}
 	return &cfg
