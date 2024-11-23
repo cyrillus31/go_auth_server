@@ -4,3 +4,5 @@ tasks:
   run:
     cmds:
       - go run ./cmd/sso/main.go --config=./config/local.yaml
+
+  default: task run
